@@ -1220,6 +1220,7 @@ struct mt76_ethtool_worker_info {
 	int initial_stat_idx;
 	int worker_stat_count;
 	int sta_count;
+	bool has_eht;
 };
 
 #define CCK_RATE(_idx, _rate) {					\
