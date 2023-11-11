@@ -5039,7 +5039,7 @@ static int ieee80211_add_intf_link(struct wiphy *wiphy,
 	if (wdev->use_4addr)
 		return -EOPNOTSUPP;
 
-	return ieee80211_vif_set_links(sdata, wdev->valid_links, 0);
+	return ieee80211_vif_set_links(sdata, wdev->valid_links, 0, false);
 }
 
 static void ieee80211_del_intf_link(struct wiphy *wiphy,
@@ -5056,7 +5056,7 @@ static void ieee80211_del_intf_link(struct wiphy *wiphy,
 	 * of removing the link_id from the bitmap, pass a masked value to
 	 * simulate as if link_id does not exist anymore.
 	 */
-	ieee80211_vif_set_links(sdata, new_links, 0);
+	ieee80211_vif_set_links(sdata, new_links, 0, true);
 }
 
 static int
