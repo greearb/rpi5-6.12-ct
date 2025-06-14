@@ -1553,7 +1553,7 @@ static void __sta_info_destroy_part2(struct sta_info *sta, bool recalc)
 		if (ret) {
 			WARN_ON_ONCE(1);
 			sdata_info(sdata, "sta-info-move-state drv_sta_state returned error, current state: %d  new_state: %d, err: %d\n",
-				   sta->sta_state, new_state, err);
+				   sta->sta_state, sta->sta_state - 1, ret);
 			break;
 		}
 	}

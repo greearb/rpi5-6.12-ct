@@ -910,6 +910,8 @@ struct mt76_dev {
 	struct mt76_rx_status rx_ampdu_status;
 	u32 rx_ampdu_len;
 	u32 rx_ampdu_ref;
+	int first_failed_mcu_cmd;
+	int last_successful_mcu_cmd;
 
 	struct mutex mutex;
 
