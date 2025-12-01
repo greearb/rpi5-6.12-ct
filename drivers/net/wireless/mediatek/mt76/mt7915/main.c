@@ -1331,7 +1331,6 @@ static void mt7915_sta_rc_update(struct ieee80211_hw *hw,
 	struct mt7915_sta *msta = (struct mt7915_sta *)sta->drv_priv;
 	struct mt7915_phy *phy = mt7915_hw_phy(hw);
 	struct mt7915_dev *dev = phy->dev;
-	struct mt7915_sta *msta = (struct mt7915_sta *)sta->drv_priv;
 
 	if (!msta->wcid.sta)
 		return;
