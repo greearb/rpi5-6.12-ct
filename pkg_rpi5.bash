@@ -20,9 +20,9 @@ sudo cp arch/arm64/boot/dts/overlays/*.dtb* $RPI_BOOT/overlays/ || exit 1
 sudo cp arch/arm64/boot/dts/overlays/README $RPI_BOOT/overlays/ || exit 1
 sudo cp .config $RPI_BOOT/config-6.12.33-v8-16k-ct+ || exit 1
 
-mkdir -p $RPI_BOOT/lib/firmware/mediatek || exit 1
-cp -ar ~/git/linux-firmware/mediatek/* $RPI_BOOT/lib/firmware/mediatek/ || exit 1
-cp -ar ~/git/linux-firmware/intel/iwlwifi/* $RPI_BOOT/lib/firmware/ || exit 1
+sudo mkdir -p $RPI_ROOT/lib/firmware/mediatek || exit 1
+sudo cp -ar ~/git/linux-firmware/mediatek/* $RPI_ROOT/lib/firmware/mediatek/ || exit 1
+sudo cp -ar ~/git/linux-firmware/intel/iwlwifi/* $RPI_ROOT/lib/firmware/ || exit 1
 
 cd $RPI_ROOT/
 tar -cvzf ../$RPI_TGZ *
